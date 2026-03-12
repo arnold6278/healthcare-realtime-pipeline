@@ -205,3 +205,21 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# Virtual environment — large, auto-generated, never commit
+venv/
+env/
+ 
+# Secret files — NEVER commit these to the repo
+.env
+*.json
+application_default_credentials.json
+ 
+# Python cache — auto-generated, not needed in the repo
+__pycache__/
+*.pyc
+*.pyo
+ 
+# OS files
+.DS_Store
+Thumbs.db
