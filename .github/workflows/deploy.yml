@@ -61,7 +61,7 @@ jobs:
             --source=cloud_function/ \
             --entry-point=ingest_raw \
             --trigger-topic=healthcare-appointments \
-             --service-account=cloud-function-sa@healthcare-pipeline-demo.iam.gserviceaccount.com \
+            --service-account=cloud-function-sa@healthcare-pipeline-demo.iam.gserviceaccount.com \
             --set-env-vars=RAW_TABLE_ID=healthcare-pipeline-demo.healthcare_dataset.raw_appointments \
             --memory=256Mi \
             --timeout=60s \
