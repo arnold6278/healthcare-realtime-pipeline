@@ -1,4 +1,4 @@
-MERGE `YOUR_PROJECT_ID.healthcare_dataset.analytics_appointments` AS target
+MERGE `healthcare-pipeline-demo.healthcare_dataset.analytics_appointments` AS target
 USING (
   SELECT
     app_id,
@@ -18,7 +18,7 @@ USING (
       ELSE 'LOW'
     END                                            AS urgency_level,
     CURRENT_TIMESTAMP()                            AS transformed_at
-  FROM `YOUR_PROJECT_ID.healthcare_dataset.raw_appointments`
+  FROM `healthcare-pipeline-demo.healthcare_dataset.raw_appointments`
   WHERE TIMESTAMP_SECONDS(CAST(timestamp AS INT64))
         >= TIMESTAMP_SUB(CURRENT_TIMESTAMP(), INTERVAL 2 MINUTE)
 ) AS source
